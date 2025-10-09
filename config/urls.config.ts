@@ -3,10 +3,16 @@
  * Gọi để load biến môi trường vào process.env
  */
 import dotenv from "dotenv";
-dotenv.config();
+import path from "path";
 
 const ENV = process.env.ENVIRONMENT || "dev";
-const baseURL = process.env.BASE_URL;
+const envPath = path.resolve(`.env.${ENV}`);
+console.log("envPath",envPath)
+
+dotenv.config({ path: envPath });
+
+export const baseURL = process.env.BASE_URL;
+export const productBaseURL = process.env.BASE_PRODUCT_URL;
 
 export const endPoint = {
   auth: `${baseURL}/authentication/api/v1`,
@@ -17,3 +23,10 @@ export const endPoint = {
   cashbook: `${baseURL}/cashbook/api/v1`,
   file: `${baseURL}/file/api/v1`,
 };
+
+export const baseProductEndpoints = {
+  attributes: `${productBaseURL}/attribute`,
+
+
+
+}

@@ -19,7 +19,7 @@ export const accounts: Record<Env, Account> = {
   },
   prod: {
     username: "0383513969",
-    password: "123456789",
-    tenant: "3557c26a-fc44-560a-ce18-3a0dc930945b",
+    password: "Panh2407",
+    tenant: "675064532107264",
   },
 };
