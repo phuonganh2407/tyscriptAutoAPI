@@ -41,8 +41,8 @@ export const AuthFlowHelper = {
   /**
    * Full flow login + lấy shopId
    */
-  initFullAuthFlow: async () => {
-    await AuthFlowHelper.loginAndSaveToken();
-    // await AuthFlowHelper.getShopIdAndSave();
-  },
+  // initFullAuthFlow: async () => {
+  //   await AuthFlowHelper.loginAndSaveToken();
+  //   // await AuthFlowHelper.getShopIdAndSave();
+  // },
 };
